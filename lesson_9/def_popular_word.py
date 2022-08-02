@@ -6,10 +6,7 @@ def popular_words(*args) -> dict:
     '''
 
     text_list = [word for word in args[0].lower().split()]
-    dict_counter = {}
-
-    for i in args[1]:
-        dict_counter.setdefault(i, text_list.count(i))
+    dict_counter = {i : text_list.count(i) for i in args[1]}
 
     return dict_counter
 
